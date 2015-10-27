@@ -13,7 +13,7 @@ testP <- predict(modFit,testSA)
 trainP <- predict(modFit,trainSA)
 missClass = function(values,prediction){sum(((prediction > 0.5)*1) != values)/length(values)}
 
-print("misclassfication rate fo Test data is ")
+print("misclassfication rate fo Test data is :")
 print(missClass(testSA$chd,testP))
-print("misclassfication rate fo Train data is ")
+print("misclassfication rate fo Train data is :")
 print(missClass(trainSA$chd,trainP))
