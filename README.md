@@ -1,1 +1,2 @@
+:q
 My Project
