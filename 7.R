@@ -1,0 +1,10 @@
+library(ElemStatLearn)
+data(vowel.train)
+data(vowel.test) 
+set.seed(33833)
+vowel.train$y = as.factor(vowel.train$y)
+vowel.test$y = as.factor(vowel.test$y)
+library(caret)
+modFit <- train(y~.,method="rf",data=vowel.train)
+varImpPlot(modFit$finalModel)
+#x2>x1>x5>x6>x8>x4>x9>x3>x7>10
